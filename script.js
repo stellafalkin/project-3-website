@@ -143,7 +143,7 @@ var SCALE = 1.1 //can change and will scale every feature involved in chart prop
         .attr("stroke", "white")
         .style("stroke-width", "2px")
         .style("opacity", 0.7)
-        .on("mouseover", function (event, d) {.  //when mouse is hovering over slice, enlarge slice
+        .on("mouseover", function (event, d) {  //when mouse is hovering over slice, enlarge slice
           d3.select(this) //expand slice
             .transition()
             .duration(150)
