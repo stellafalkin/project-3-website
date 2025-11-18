@@ -1,0 +1,79 @@
+/* Basic page style resets */
+* {
+  box-sizing: border-box;
+}
+[hidden] {
+  display: none !important;
+}
+
+@font-face {
+    font-family: 'Moreganic'; /* Choose a name for your font */
+    src: url('fonts/Moreganic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#my_dataviz text,
+#my_dataviz tspan,
+#legend,
+.legend-item,
+.legend-name {
+  font-family: "Moreganic", sans-serif;
+}
+
+#dataviz-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 32px;          
+  margin-top: 24px;
+  margin-left: 80px;
+}
+
+#my_dataviz {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+svg {
+  overflow: visible;
+}
+
+#legend {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 25px 25px;
+  align-items: start;
+  justify-content: center;
+  margin-top: -160px;
+  margin-left: 50px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 8px;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  background: #fafafa;
+}
+
+:root {
+  --scale: 1.35;   /* match your JS SCALE */
+}
+
+.legend-img {
+  width: calc(120px * var(--scale));
+  height: calc(120px * var(--scale));
+  border-radius: 6px;
+  object-fit: contain;
+  border: 1px solid #ccc;
+  flex-shrink: 0;
+}
+
+.legend-name {
+  font-size: 14px;
+  font-weight: 600;
+}
